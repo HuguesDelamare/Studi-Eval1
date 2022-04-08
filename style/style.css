@@ -1,0 +1,43 @@
+
+/*** BODY/HTML ***/
+
+body {
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: #222;
+    line-height: 1;
+    
+  }
+
+/*** HEADER ***/
+
+
+
+/*** MAIN ***/
+main #jumbotron {
+    background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/11/SPA-Societe-Protectrice-des-Animaux-Campagne-Hiver-Desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+main #jumbotron .jumbotron-content {
+    width: 200px;
+}
+
+main #jumbotron .jumbotron-button {
+    border-radius: 20%;
+    
+}
+
+.article-adhesion {
+    display: flex;
+}
+
+.article-adhesion img {
+    width: 250px;
+    height: 250px;
+}
+
+
+/*** FOOTER ***/
