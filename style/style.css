@@ -1,43 +1,107 @@
-
 /*** BODY/HTML ***/
 
+html, body  {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: "Roboto",sans-serif;
-    font-size: 16px;
-    color: #222;
-    line-height: 1;
-    
-  }
+	background-color: #fffaf7;
+	font-family: "Roboto", sans-serif !important;
+	font-size: 16px;
+	color: #222;
+	line-height: 1;
+}
 
 /*** HEADER ***/
 
+ header .logo-image img{
+    width: 72px;
+    height: 80px;
+}
 
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 15px;
+}
 
 /*** MAIN ***/
-main #jumbotron {
-    background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/11/SPA-Societe-Protectrice-des-Animaux-Campagne-Hiver-Desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center top;
-}
 
-main #jumbotron .jumbotron-content {
-    width: 200px;
-}
-
-main #jumbotron .jumbotron-button {
-    border-radius: 20%;
+main .sticky-donate-button {
+    bottom: 0;
+    float: right;
+    position: sticky;
     
 }
 
-.article-adhesion {
+main #container-articles {
+    margin-top: 2.5rem;
+}
+
+/*#jumbotron .jumbotron-right{
+    background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/11/SPA-Societe-Protectrice-des-Animaux-Campagne-Hiver-Desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top; 
+}
+
+main #jumbotron #jumbotron-content {
+    color: #fff;
+    background-color: rgb(110, 138, 153);
+}*/
+
+main #jumbotron .jumbotron-left-content {
+    background-color: rgb(110, 138, 153);
+    color: #fff;
+    padding: 2.2rem;
+}
+
+main #jumbotron .jumbotron-left-content button {
+    border-radius: 25px;
+    width: 140px;
+    height: 50px;
+    margin: 20px;
+    color: #222;
+    border: 2px solid #fff;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+main #articles-container article {
     display: flex;
+    margin-top: 3rem;
+    padding: 1.3rem;
 }
 
-.article-adhesion img {
-    width: 250px;
-    height: 250px;
+main #articles-container article img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-right: 15px;
 }
 
+main #articles-container article button, #navbarNavDropdown .navbar-nav .nav-item a {
+    border-radius: 20px;
+    padding: 15px 25px 15px 25px;
+}
+
+main #articles-container article button {
+    color: white;
+    background-color: #6e8a99;
+    border: 6e8a99 1px solid;
+}
+
+article:nth-child(odd) {
+    background-color: #fdf3ed;
+}
+
+main #articles-container article:last-child button{
+    background-color: orange;
+}
 
 /*** FOOTER ***/
