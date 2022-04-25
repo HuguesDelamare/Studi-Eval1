@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+          <meta charset="UTF-8">
+          <title>La société protecrice des Animaux (SPA)</title>
+          <link href="style/style.css" rel="stylesheet">
+        </head>
+    <body>
+
+        <header>
+          <navbar>
+            <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">ACCUEIL</a>
+              <a href="#">LA SPA</a>
+              <a href="#">MISSIONS</a>
+              <a href="#">ADOPTER</a>
+              <a href="#">MALTRAITANCE</a>
+            </div>
+
+            <div class="main-container">
+              <div id="logo">
+                <a href="#" class="logo-image">
+                  <img src="https://www.la-spa.fr/app/assets-spa/uploads/2021/09/MicrosoftTeams-image-63.png" 
+                       alt="Logo La SPA">
+                </a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+              </div>
+
+            </div>
+          </navbar>
+        </header>
+
+        <main>
+
+        </main>
+
+        <footer>
+          <div class="newletterContainer">
+            <h2>
+              Ne ratez plus rien
+              <br>
+              de nos actions
+              <br>
+              Inscrivez-vous à la newletter.
+            </h2>
+            <button id="newsletterButton">
+              Je m'inscris
+            </button>
+          </div>
+          <div class="footerLinks">
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contactez-nous</a></li>
+              <li><a href="#">Plan du site</a></li>
+              <li><a href="#">Appels d'offre</a></li>
+            </ul>
+            <p>La SPA - Copyright 2022</p>
+          </div>
+         
+        </footer>
+        <script>
+          /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+          function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+
+          /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+          function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+          } 
+
+          let slideIndex = 1;
+
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+          } 
+        </script>
+    </body>
+</html>
+
+

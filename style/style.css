@@ -1,59 +1,110 @@
 /*** BODY/HTML ***/
 
-html, body  {
-  font-size: 25px;
-  margin: 0;
-  padding: 0;
+* {
+    font-size: 30px;
+}
+
+body, html {
+    margin: 0 auto;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+    color: #222;
+    font-weight: bold;
 }
 
 body {
 	background-color: #fffaf7;
-	font-family: "Roboto", sans-serif !important;
+	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	color: #222;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 /*** HEADER ***/
 
- header .logo-image img{
-    width: 72px;
-    height: 80px;
+.main-container #logo {
+    margin: 20px;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+header .logo-image img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #fffaf7;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffa500;
+    display: block;
+    transition: 0.3s;
     margin: 15px;
 }
 
-/*** MAIN ***/
-
-main .sticky-donate-button {
-    bottom: 0;
-    float: right;
-    position: sticky;
-    
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 70px;
+    margin-left: 50px;
 }
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 60px;
+    cursor: pointer;
+    color: #222;
+    background-color: #fffaf7;
+    padding: 10px 15px;
+    border: none;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+} 
+
+
+
+/*** MAIN ***/
 
 main #container-articles {
     margin-top: 2.5rem;
 }
-
-/*#jumbotron .jumbotron-right{
-    background-image: url("https://www.la-spa.fr/app/assets-spa/uploads/2021/11/SPA-Societe-Protectrice-des-Animaux-Campagne-Hiver-Desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center top; 
-}
-
-main #jumbotron #jumbotron-content {
-    color: #fff;
-    background-color: rgb(110, 138, 153);
-}*/
 
 main #jumbotron .jumbotron-left-content {
     background-color: rgb(110, 138, 153);
@@ -61,15 +112,30 @@ main #jumbotron .jumbotron-left-content {
     padding: 2.2rem;
 }
 
-main #jumbotron .jumbotron-left-content button {
-    border-radius: 25px;
-    width: 140px;
-    height: 50px;
+main #jumbotron .jumbotron-left-content button, main #articles-container article .article-button, #newsletterButton {
+    border-radius: 42px;
+    width: auto;
+    height: auto;
+    padding: 25px 35px 25px 35px;
     margin: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+main #jumbotron .jumbotron-left-content button {
     color: #222;
     border: 2px solid #fff;
     background-color: #fff;
-    font-weight: bold;
+}
+
+main #jumbotron .jumbotron-left-content button:hover {
+    background-color: #fff;
+}
+
+main #articles-container article .article-button {
+    background-color: #6e8a99;
+    color: #fff;
+    border: 2px solid #6e8a99;
 }
 
 main #articles-container article {
@@ -79,29 +145,148 @@ main #articles-container article {
 }
 
 main #articles-container article img {
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 390px;
     border-radius: 10px;
     margin-right: 15px;
 }
 
-main #articles-container article button, #navbarNavDropdown .navbar-nav .nav-item a {
-    border-radius: 20px;
-    padding: 15px 25px 15px 25px;
-}
-
-main #articles-container article button {
-    color: white;
-    background-color: #6e8a99;
-    border: 6e8a99 1px solid;
-}
-
-article:nth-child(odd) {
+article:nth-child(even) {
     background-color: #fdf3ed;
 }
 
-main #articles-container article:last-child button{
-    background-color: orange;
+main #articles-container article:last-child button {
+    background-color: #ffa500;
+    border: 2px solid #ffa500;
+}
+
+main #articles-container article:last-child button:hover {
+    background-color: #fff;
+}
+
+/* CAROUSEL */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 35px;
+  background-color: black;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 /*** FOOTER ***/
+
+footer .newletterContainer {
+    background-image: url(https://www.la-spa.fr/app/assets-spa/uploads/2021/10/Newsletter-Deskop.jpg);
+    width: 100%;
+    height: 380px;
+    color: #fff;
+    font-family: "Amatic SC",cursive;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer .newletterContainer h2 {
+    text-align: center;
+}
+
+footer .footerLinks {
+    background-color: #133836;
+    line-height: 1.55;
+    height: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .footerLinks ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer .footerLinks ul li a, footer p {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+footer p {
+    margin-left: 36px;
+}
+
+footer .footerLinks ul li a:hover {
+    text-decoration: underline;
+}

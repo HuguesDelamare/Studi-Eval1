@@ -4,110 +4,186 @@
           <meta charset="UTF-8">
           <title>La société protecrice des Animaux (SPA)</title>
           <link href="style/style.css" rel="stylesheet">
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-          rel="stylesheet" 
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-          crossorigin="anonymous">
         </head>
     <body>
+
         <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="header-content">
-                    <a href="#" class="logo-image"><img src="https://www.la-spa.fr/app/assets-spa/uploads/2021/09/MicrosoftTeams-image-63.png" alt="Logo La SPA" class="header__logo-default"></a>
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">ACCUEIL</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">LA SPA</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">MISSIONS</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">ADOPTER</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </nav>
+          <navbar>
+            <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">ACCUEIL</a>
+              <a href="#">LA SPA</a>
+              <a href="#">MISSIONS</a>
+              <a href="#">ADOPTER</a>
+              <a href="#">MALTRAITANCE</a>
+            </div>
+
+            <div class="main-container">
+              <div id="logo">
+                <a href="#" class="logo-image">
+                  <img src="https://www.la-spa.fr/app/assets-spa/uploads/2021/09/MicrosoftTeams-image-63.png" 
+                       alt="Logo La SPA">
+                </a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+              </div>
+
+            </div>
+          </navbar>
         </header>
 
         <main>
-            <button class="sticky-donate-button" href=""> Je donne </button>
-
-            <div class="container-fluid py-5" id="jumbotron">
+            <div class="container-fluid" id="jumbotron">
               <div class="jumbotron-left-content">
-                <h5 class="display-8 fw-bold">DONNONS-LEUR AUTANT QU'ILS NOUS APPORTENT</h5>
-                <p class="col-md-8 fs-4">Pour toutes les fois où ils nous ont sauvé la mise et nous ont apporté tendresse, joie, réconfort. Parce qu’ils le méritent tant, donnons-leur autant qu’ils nous apportent !</p>
+                <h5>DONNONS-LEUR AUTANT <br> QU'ILS NOUS APPORTENT</h5>
+                <p>Pour toutes les fois où ils nous ont sauvé la mise et nous ont apporté tendresse, joie, réconfort. Parce qu’ils le méritent tant, donnons-leur autant qu’ils nous apportent !</p>
                 <button class="jumbotron-button" type="button">Je donne</button>
                 <button class="jumbotron-button" type="button">J'adopte</button>
                 <button class="jumbotron-button" type="button">J'adhère</button>
               </div>
-
-              <div class="jumbotron-rigt"></div>
             </div>
 
             <div class="container-fluid" id="articles-container">
 
               <article class="article-adhesion">
                 <div class="image">
-                  <img src="images/adoption.jpg" alt="La SPA s’engage aux côtés des Ukrainiens" width="820" height="560">
+                  <img src="images/adoption.jpg" alt="La SPA s’engage aux côtés des Ukrainiens">
                 </div>
                 <div class="article-content">
                   <h3>Adhésion 2022 : faites entendre leur voix !</h3>
                   <p>Adhérer à la SPA, c'est porter la voix des animaux haut et fort, défendre le bien-être animal et soutenir nos grands combats éthiques.</p>
                   <p>Pour participer à l’élection du prochain Conseil d’Administration de la SPA lors de l’Assemblée Générale du 25 juin 2022, prenez votre adhésion 2022 avant le 15 mai.</p>
-                  <button class="" type="button">J'adhère à la SPA</button>
+                  <button class="article-button" type="button">J'adhère à la SPA</button>
                 </div>
               </article>
 
               <article class="article-joining">
                 <div class="image">
-                  <img src="images/bloc-mob.jpg" alt="La SPA s’engage aux côtés des Ukrainiens" width="820" height="560">
+                  <img src="images/bloc-mob.jpg" alt="La SPA s’engage aux côtés des Ukrainiens">
                 </div>
                 <div class="article-content">
                   <h3>#LesAnimauxAuProgramme</h3>
                   <p>Alors que dans moins de deux mois se déroulera le premier tour des élections présidentielles, force est de constater que la cause animale est la grande oubliée du débat politique actuel.</p>
                   <p>Rejoignez notre appel citoyen et donnez du poids à la cause animale pour mettre les animaux au programme !</p>
-                  <button class="" type="button">Je rejoins l'appel de la SPA</button>
+                  <button class="article-button" type="button">Je rejoins l'appel de la SPA</button>
                 </div>
               </article>
 
               <article class="article-ukraine">
                 <div class="image">
-                  <img src="images/la-spa-ukraine.jpg" alt="La SPA s’engage aux côtés des Ukrainiens" width="820" height="560">
+                  <img src="images/la-spa-ukraine.jpg" alt="La SPA s’engage aux côtés des Ukrainiens">
                 </div>
                 <div class="article-content">
                   <h3>La SPA s’engage aux côtés des Ukrainiens</h3>
                   <p>Cela fait maintenant plus de 4 semaines que la guerre a éclaté en Ukraine et qu’une nouvelle crise humanitaire a débuté. 
                     La SPA quant à elle poursuit son engagement et son attachement au maintien du lien Homme-Animal en apportant son soutien aux réfugiés et à leurs animaux de compagnie.</p>
-                  <button class="" type="button">Lire l'article</button>
+                  <button class="article-button" type="button">Lire l'article</button>
                 </div>
               </article>
             </div>
+
+
+            <article>
+               <!-- Slideshow container -->
+              <div class="slideshow-container">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <div class="mySlides fade">
+                  <a href="">
+                    <img src="images/stimulez-chien-recherche-olfactive_683.jpg" style="width:100%">
+                    <div class="text">Stimulez votre chien grâce à la recherche olfactive</div>
+                  </a>
+                </div>
+
+                <div class="mySlides fade">
+                  <a href="">
+                    <img src="images/convention-police-nationale-PC.jpg" style="width:100%">
+                    <div class="text">La SPA signe une convention avec la Police Nationale</div>
+                  </a>
+                </div>
+
+                <div class="mySlides fade">
+                  <a href="">
+                    <img src="images/saisie.jpg" style="width:100%">
+                    <div class="text">Sauvetage de 111 animaux en Haute-Saône</div>
+                  </a>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+            </article>
         </main>
 
         <footer>
-          <div class="container">
-            <h3></h3>
-
+          <div class="newletterContainer">
+            <h2>
+              Ne ratez plus rien
+              <br>
+              de nos actions
+              <br>
+              Inscrivez-vous à la newletter.
+            </h2>
+            <button id="newsletterButton">
+              Je m'inscris
+            </button>
           </div>
-
-
-
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-                    crossorigin="anonymous">
-            </script>
+          <div class="footerLinks">
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contactez-nous</a></li>
+              <li><a href="#">Plan du site</a></li>
+              <li><a href="#">Appels d'offre</a></li>
+            </ul>
+            <p>La SPA - Copyright 2022</p>
+          </div>
+         
         </footer>
+        <script>
+          /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+          function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+
+          /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+          function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+          } 
+
+          let slideIndex = 1;
+
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+          } 
+        </script>
     </body>
 </html>
 
